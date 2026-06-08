@@ -611,10 +611,10 @@ button { font: inherit; }
 
   <main class="home-content">
     <section class="hero">
-      <div class="eyebrow">Mangrove Ecosystem Management Simulation</div>
-      <h2>Explore. Restore. Reflect.</h2>
-      <p>Take on the role of a coastal conservation officer. Explore mangrove ecosystems, respond to environmental incidents, 
-        and make restoration decisions that determine the future health of a degraded coastal habitat.</p>
+      <div class="eyebrow">Every Decision Shapes the Coast</div>
+      <h2>Explore. Learn. Restore.</h2>
+      <p>Discover the importance of mangrove ecosystems through interactive exploration and environmental decision-making. 
+        Learn how conservation actions can shape the future of coastal habitats and communities.</p>
     </section>
 
     <section class="map-area" aria-label="World map site selector">
@@ -636,20 +636,24 @@ button { font: inherit; }
       </div>
 
       <aside class="site-panel card" id="sitePanel">
-        <span class="tag tag-amber">Selected Site</span>
+        <span class="tag tag-amber">Selected Location</span>
         <h3 id="siteName">Borneo Coastal Mangrove</h3>
-        <div class="loc" id="siteLocation"> 📍 Sarawak, Malaysia</div>
-        <div class="site-row"><div class="k">Threat Level</div><div class="v" id="siteThreat">High: pollution, erosion, tourism pressure, and climate risk.</div></div>
-        <div class="site-row"><div class="k">Mission Area</div><div class="v" id="siteMission">Tidal channels, shoreline forest, nursery habitat, and nearby community zone.</div></div>
-        <div class="fact" id="siteFact">Mangroves protect coastlines, store carbon, filter water, and provide nursery habitat for fish and crabs.</div>
+        <div class="loc" id="siteLocation"><span>📍</span>Sabah and Sarawak (Malaysia),  Kalimantan (Indonesia) and Brunei</div>
+        <div class="site-row"><div class="k"><span>🌿</span>Importance</div><div class="v" id="siteMission">Critical tropical mangrove habitat supporting diverse wildlife in Southeast Asia, such as Proboscis monkeys.</div></div>
+        <div class="site-row"><div class="k"><span>⚠️</span>Primary Threat</div><div class="v" id="siteThreat">Palm oil plantation expansion and coastal deforestation.</div></div>
+        <div class="site-row"><div class="k"><span>💡</span>Field Insight</div><div class="v"></div></div>
+
+        <div class="fact" id="siteFact">The Kinabatangan River in Sabah is a premier international mangrove and riverine tourism destination.</div>
       </aside>
     </section>
 
     <section class="mission-box card">
       <h3>Ecosystem Overview</h3>
-      <p class="overview-text">Mangrove forests are vital coastal ecosystems that protect shorelines, support marine biodiversity, filter pollutants, 
-        and store large amounts of carbon. However, these ecosystems are increasingly threatened by pollution, habitat destruction, invasive species, 
-        and human activities. Effective conservation requires careful environmental management, informed decision-making, and long-term restoration efforts.</p>
+      <p class="overview-text">Mangrove forests are vital coastal ecosystems that protect shorelines, sustain marine biodiversity, 
+        improve water quality, and store massive amounts of carbon. Despite their importance, mangroves are increasingly threatened by pollution, 
+        habitat loss, and unsustainable human activities, making conservation and restoration efforts essential.</p>
+        <br>
+        <h4 style="color: var(--teal-glow);">Key Functions of Mangroves</h3>
       <div class="eco-grid">
         <div class="eco-card"><span>🌊</span>Coastline Protection</div>
         <div class="eco-card"><span>🐟</span>Marine Biodiversity</div>
@@ -659,10 +663,10 @@ button { font: inherit; }
         <div class="eco-card"><span>💧</span>Water Filtration</div>
       </div>
       <h3>Mission Overview</h3>
-      <div class="mission-title">You have been assigned as a Mangrove Restoration Officer.</div>
-      <div class="mission-text">Investigate environmental incidents across a degraded mangrove ecosystem and 
-        select the most appropriate management response while working within a limited restoration budget. 
-        Your decisions will influence ecosystem recovery and may create additional environmental consequences that require further action.</div>
+      <div class="mission-title" style="color:var(--teal-glow);">Your mission is to restore a threatened mangrove ecosystem.</div>
+      <div class="mission-text">Respond to environmental incidents, manage limited restoration funds, 
+        and make critical conservation decisions. Every choice has consequences that will shape the 
+        future health of the ecosystem and the communities that depend on it.</div>
       <div class="cta"><button id="beginBtn" class="btn btn-primary">Begin Mission</button></div>
     </section>
   </main>
@@ -676,7 +680,7 @@ button { font: inherit; }
       <div class="header-actions">
         
         <div class="metric"><div class="metric-top"><span class="metric-label">Progress</span><span id="progressVal" class="metric-value">0/8</span></div><div class="bar"><div id="progressFill" class="fill"></div></div></div>
-      <button id="exitMissionBtn" class="btn btn-secondary btn-small">Exit Mission</button>
+      
       </div>
     </div>
     <!-- header -->
@@ -688,6 +692,7 @@ button { font: inherit; }
       <div class="metric"><div class="metric-top"><span class="metric-label">Water Quality</span><span id="waterQualityVal" class="metric-value">50</span></div><div class="bar"><div id="waterQualityFill" class="fill"></div></div></div>
       <div class="metric"><div class="metric-top"><span class="metric-label">Shoreline</span><span id="shorelineVal" class="metric-value">50</span></div><div class="bar"><div id="shorelineFill" class="fill"></div></div></div>
       <div class="metric"><div class="metric-top"><span class="metric-label">Carbon</span><span id="carbonVal" class="metric-value">50</span></div><div class="bar"><div id="carbonFill" class="fill"></div></div></div>
+      <button id="exitMissionBtn" class="btn btn-secondary btn-small">Back</button>
       <button id="viewReportBtn" class="btn btn-secondary btn-small">View Report</button></div>
     </header>
 
@@ -742,7 +747,7 @@ button { font: inherit; }
         <span id="resultCostTag" class="tag tag-teal">RM 0</span>
       </div>
       <div class="result-actions">
-        <button id="resultReportBtn" class="btn btn-secondary btn-small"></button>
+        <!-- <button id="resultReportBtn" class="btn btn-secondary btn-small"></button>  -->
         <button id="resultContinueBtn" class="btn btn-primary btn-small">Continue Mission</button>
       </div>
     </aside>
@@ -789,6 +794,7 @@ button { font: inherit; }
     <div class="result-actions report-actions">
       <button id="restartBtn" class="btn btn-secondary btn-small">Restart Mission</button>
       <button id="closeReportBtn2" class="btn btn-primary btn-small">Back to Mission</button>
+      
     </div>
   </section>
 </div>
@@ -804,39 +810,39 @@ button { font: inherit; }
 /* ===================== DATA ===================== */
 const sites = {
   borneo: {
-    name: 'Borneo Coastal Mangrove',
-    location: 'Sarawak, Malaysia',
-    threat: 'High: pollution, erosion, tourism pressure, and climate risk.',
-    mission: 'Tidal channels, shoreline forest, nursery habitat, and nearby community zone.',
-    fact: 'Borneo mangroves support fisheries, protect coastal villages, and store blue carbon in waterlogged soil.'
+    name: 'Borneo Mangroves',
+    location: 'Sabah and Sarawak (Malaysia),  Kalimantan (Indonesia) and Brunei',
+    threat: 'Palm oil plantation expansion and coastal deforestation. ',
+    mission: 'Critical tropical mangrove habitat supporting diverse wildlife in Southeast Asia, such as Proboscis monkeys.',
+    fact: 'The Kinabatangan River in Sabah is a premier international mangrove and riverine tourism destination.'
   },
   sundarbans: {
-    name: 'Sundarbans Mangrove Delta',
-    location: ' Bangladesh / India',
-    threat: 'Severe: cyclones, salinity rise, erosion, and habitat pressure.',
-    mission: 'Delta islands, tiger habitat, river mouths, and exposed shoreline settlements.',
-    fact: 'The Sundarbans is one of the world’s largest mangrove forests and a major natural storm barrier.'
+    name: 'Sundarbans Mangroves',
+    location: 'Sundarbans, Ganges delta between India and Bangladesh',
+    threat: ' Industrial development, deforestation and climate change.',
+    mission: 'World\'s largest mangrove forest; supports single largest tiger population adapted to amphibious life.',
+    fact: 'Spanning  10,000 km², the Surdarbans is a UNESCO World Heritage Site formed by confluence of Ganges, Brahmaputra, and Meghna rivers.'
   },
   mekong: {
-    name: 'Mekong Delta Mangrove Belt',
-    location: 'Southern Vietnam',
-    threat: 'High: aquaculture expansion, sediment loss, and shoreline retreat.',
-    mission: 'Mudflats, shrimp farm edges, tidal creeks, and restoration buffer zones.',
-    fact: 'Mekong mangroves reduce wave energy and help stabilize soft delta coastlines.'
+    name: 'Mekong Delta Mangroves',
+    location: 'Mekong Delta, Vietnam',
+    threat: 'Sea-level rise and conversion into commercial shrimp farming.',
+    mission: 'Protects coasts from soil erosion and strong waves; supplies seafood and accumulates blue carbon.',
+    fact: 'Eco-certified, mangrove-friendly shrimp farming initiatives are actively restoring forests to safeguard coastal communities.'
   },
   amazon: {
     name: 'Amazon Mangroves',
-    location: 'Northern Brazil',
-    threat: 'Moderate: development pressure, plastic waste, and changing river discharge.',
-    mission: 'Estuary channels, forest edge habitat, fish nursery areas, and remote coastlines.',
-    fact: 'Amazon mangroves are connected to huge freshwater and sediment flows from the Amazon River system.'
+    location: 'Amazon River mouth, North coast of Brazil, Brazil',
+    threat: 'Climate change and coastal development.',
+    mission: 'Form the world\'s longest continuous coastal belt of mangroves; vital breeding grounds for marine life, including the endangered Atlantic Goliath Grouper. ',
+    fact: 'Spanning ~7,800 km², Brazil holds nearly 10% of the world\'s mangroves, making them crucial "blue guardians" for carbon storage.'
   },
   everglades: {
-    name: 'Everglades Mangrove Coast',
-    location: 'Florida, United States',
-    threat: 'High: storm surge, sea level rise, and water-flow disruption.',
-    mission: 'Coastal wetlands, estuary habitat, bird nesting zones, and storm protection areas.',
-    fact: 'Everglades mangroves help buffer storms while supporting birds, fish, and other coastal wildlife.'
+    name: 'Everglades Mangroves',
+    location: 'Everglades National Park, Southern Florida, USA',
+    threat: 'Climate change causing sea-level rise and saltwater intrusion.',
+    mission: 'Largest mangrove ecosystem in the Western Hemisphere; major breeding ground for wading birds in North America.',
+    fact: 'Contiguous mangrove forests stretch from freshwater marshes seaward to Florida Bay and Gulf of Mexico.'
   }
 };
 
@@ -982,7 +988,7 @@ function bindStaticEvents() {
   $('#confirmDecisionBtn').addEventListener('click', confirmDecision);
   $('#resultCloseBtn').addEventListener('click', hideResultPopup);
   $('#resultContinueBtn').addEventListener('click', hideResultPopup);
-  $('#resultReportBtn').addEventListener('click', openReportModal);
+  //$('#resultReportBtn').addEventListener('click', openReportModal);
   $('#viewReportBtn').addEventListener('click', openReportModal);
   $('#closeReportBtn').addEventListener('click', closeReportModal);
   $('#closeReportBtn2').addEventListener('click', closeReportModal);
@@ -1037,7 +1043,7 @@ function updateSitePanel(siteId) {
   $('#siteThreat').textContent = site.threat;
   $('#siteMission').textContent = site.mission;
   $('#siteFact').textContent = site.fact;
-  $('#activeSiteName').textContent = site.name.replace('Coastal ', '').replace('Mangrove ', 'Mangrove ');
+  /* $('#activeSiteName').textContent = site.name.replace('Coastal ', '').replace('Mangrove ', 'Mangrove '); */
 }
 
 /* ===================== GAME SCENE SYSTEM ===================== */
